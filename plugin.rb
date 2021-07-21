@@ -1,7 +1,6 @@
 # frozen_string_literal: true
-
-# name: PersonalNotes
-# about: store personal notes
+# name: Personal Notes
+# about: Store personal notes
 # version: 0.1
 # authors: STEMAWAY/FS3-JUNE
 # url: 
@@ -12,7 +11,7 @@ register_asset 'stylesheets/mobile/personal-notes.scss', :mobile
 
 enabled_site_setting :personal_notes_enabled
 
-PLUGIN_NAME ||= 'PersonalNote'
+PLUGIN_NAME ||= 'Personal Notes'
 
 load File.expand_path('lib/personal-notes/engine.rb', __dir__)
 
