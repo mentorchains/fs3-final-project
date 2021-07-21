@@ -1,0 +1,4 @@
+plugins:
+  personal_notes_enabled:
+    default: true
+    client: true
