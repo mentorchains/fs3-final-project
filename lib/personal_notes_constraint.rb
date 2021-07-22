@@ -1,4 +1,4 @@
-class PersonalNoteConstraint
+class PersonalNotesConstraint
   def matches?(request)
     SiteSetting.personal_notes_enabled
   end

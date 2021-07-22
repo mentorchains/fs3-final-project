@@ -1,11 +1,11 @@
-module PersonalNote
+module PersonalNotes
   class Engine < ::Rails::Engine
-    engine_name "PersonalNote".freeze
-    isolate_namespace PersonalNote
+    engine_name "PersonalNotes".freeze
+    isolate_namespace PersonalNotes
 
     config.after_initialize do
       Discourse::Application.routes.append do
-        mount ::PersonalNote::Engine, at: "/personal-notes"
+        mount ::PersonalNotes::Engine, at: "/personal-notes"
       end
     end
   end
