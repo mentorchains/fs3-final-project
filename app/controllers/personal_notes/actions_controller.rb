@@ -1,6 +1,6 @@
-module PersonalNote
+module PersonalNotes
   class ActionsController < ::ApplicationController
-    requires_plugin PersonalNote
+    requires_plugin PersonalNotes
 
     before_action :ensure_logged_in
 
