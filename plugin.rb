@@ -5,6 +5,7 @@
 # authors: STEMAWAY/FS3-JUNE
 # url: 
 
+register_svg_icon "sticky-note" if respond_to?(:register_svg_icon)
 register_asset 'stylesheets/common/personal-notes.scss'
 register_asset 'stylesheets/desktop/personal-notes.scss', :desktop
 register_asset 'stylesheets/mobile/personal-notes.scss', :mobile
