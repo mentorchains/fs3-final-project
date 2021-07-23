@@ -7,27 +7,31 @@ function initializePersonalNote(api) {
     // note-dropdown 
     return helper.h('li.header-dropdown-toggle.note-dropdown', [
       helper.h('a.icon.btn-flat', {
-        //href: '',
-        title: 'take notes'
+        title: 'take notes',
+        id: 'menuUserNoteControl'
       }, iconNode('sticky-note')),
     ]);
   });
 
-  api.decorateWidget('timeline-controls:after', helper => {
-    // note-button 
-    return helper.h('button.widget-button.btn.btn-default.no-text.btn-icon.note-button', {
-        title: 'take notes'
-      }, iconNode('sticky-note'),
-    );
-  });
+  // I guess we don't use this now but I'll keep them in comments
+  // 
+  // api.decorateWidget('timeline-controls:after', helper => {
+  //   // note-button 
+  //   return helper.h('button.widget-button.btn.btn-default.no-text.btn-icon.note-button', {
+  //       title: 'take notes',
+  //       id: 'note-button1'
+  //     }, iconNode('sticky-note'),
+  //   );
+  // });
   
-  api.decorateWidget('timeline-footer-controls:after', helper => {
-    // note-button 
-    return helper.h('button.widget-button.btn.btn-default.no-text.btn-icon.note-button', {
-      title: 'take notes'
-    }, iconNode('sticky-note'),
-  );
-  });
+  // api.decorateWidget('timeline-footer-controls:after', helper => {
+  //   // note-button 
+  //   return helper.h('button.widget-button.btn.btn-default.no-text.btn-icon.note-button', {
+  //       title: 'take notes',
+  //       id: 'note-button2'
+  //     }, iconNode('sticky-note'),
+  //   );
+  // });
 }
 
 export default {

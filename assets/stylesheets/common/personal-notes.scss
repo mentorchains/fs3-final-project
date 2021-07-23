@@ -4,3 +4,36 @@
 .note-button {
     margin-left: 0.5em;
 }
+
+#usernoteWrapper {
+    position:fixed;
+    z-index: 1;
+    right: 10px;
+    bottom: 500px;
+    border: 1px solid #ddd;
+    background-color: #feffdd;
+    box-shadow: 7px 7px 7px rgba(0,0,0,.1);
+}
+
+#usernoteWrapperHeader {
+    display: none;
+    position:fixed;
+    z-index: 1;
+    right: 205px;
+    top: 85px;
+    border: 1px solid #ddd;
+    background-color: #feffdd;
+    box-shadow: 7px 7px 7px rgba(0,0,0,.1);
+}
+
+textarea {
+    background-color: #feffdd;
+}
+
+#bottomUserNote {
+    display: none;
+}
+
+// #bottomUserNoteControl {
+//     padding: 15px 15px
+// }
