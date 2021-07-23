@@ -3,6 +3,32 @@ import { iconNode } from "discourse-common/lib/icon-library";
 
 function initializePersonalNote(api) {
   // https://github.com/discourse/discourse/blob/master/app/assets/javascripts/discourse/lib/plugin-api.js.es6
+  api.onPageChange(() => {
+    // document.getElementById('note-button1').onclick = function() {
+    //   var x = document.getElementById("bottomUserNote");
+    //   if (x.style.display == "none") {
+    //     x.style.display = "block";
+    //   } else {
+    //     x.style.display = "none";
+    //   }
+    // }
+    document.getElementById('menuUserNoteControl').onclick = function() {
+      var x = document.getElementById("usernoteWrapperHeader");
+      if (x.style.display == "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    document.getElementById('bottomUserNoteControl').onclick = function() {
+      var x = document.getElementById("bottomUserNote");
+      if (x.style.display == "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+  });
   api.decorateWidget('header-icons:before', helper => {
     // note-dropdown 
     return helper.h('li.header-dropdown-toggle.note-dropdown', [
