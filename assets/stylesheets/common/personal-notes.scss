@@ -1,39 +1,29 @@
 .personal-notes {
 }
 
-.note-button {
-    margin-left: 0.5em;
-}
-
-#usernoteWrapper {
+#note-button {
     position:fixed;
-    z-index: 1;
-    right: 10px;
-    bottom: 500px;
-    border: 1px solid #ddd;
-    background-color: #feffdd;
-    box-shadow: 7px 7px 7px rgba(0,0,0,.1);
+    right: 0;
+    top: 45%;
 }
 
-#usernoteWrapperHeader {
+#note-body {
     display: none;
     position:fixed;
     z-index: 1;
-    right: 205px;
-    top: 85px;
+    right: 0;
+    top:50%;
     border: 1px solid #ddd;
     background-color: #feffdd;
     box-shadow: 7px 7px 7px rgba(0,0,0,.1);
+    textarea {
+        background-color: #feffdd;
+        min-width: 200px;
+        min-height: 200px;
+    }
+    .note-body-buttons {
+        float: right;
+        margin-top:-2%;
+        margin-bottom: 1.5%;
+    }
 }
-
-textarea {
-    background-color: #feffdd;
-}
-
-#bottomUserNote {
-    display: none;
-}
-
-// #bottomUserNoteControl {
-//     padding: 15px 15px
-// }

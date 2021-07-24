@@ -1,7 +1,12 @@
-<div id = 'usernoteWrapperHeader'>
-    <form id= 'usernote' action="/action_page.php">
-        <textarea id="headerNote" rows="6" cols="80"></textarea>
-        <br>
-        <input type="submit" value="Save">
-    </form>
+<button title="take notes" class="widget-button btn btn-default no-text btn-icon" id="note-button">
+  {{d-icon 'sticky-note'}}
+</button>
+
+<div id="note-body">
+  <form action="/action_page.php">
+      <textarea id="note" rows="6" cols="80"></textarea>
+      <div class = 'note-body-buttons'>
+        <input type="submit" value="Save" id="save">
+      </div>
+  </form>
 </div>
