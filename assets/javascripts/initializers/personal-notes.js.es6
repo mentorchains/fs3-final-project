@@ -16,19 +16,19 @@ function initializePersonalNote(api) {
   api.onPageChange(() => {
     document.getElementById('note-button').onclick = function() {
       var elem = document.getElementById("note-body");
-      if (elem.style.display == "none") {
-        elem.style.display = "block";
-      } else {
+      if (elem.style.display == "block") {
         elem.style.display = "none";
+      } else {
+        elem.style.display = "block";
       }
     }
 
     document.getElementById('note-dropdown').onclick = function() {
       var elem = document.getElementById("quick-notes-container");
-      if (elem.style.display == "none") {
-        elem.style.display = "block";
-      } else {
+      if (elem.style.display == "block") {
         elem.style.display = "none";
+      } else {
+        elem.style.display = "block";
       }
     }
   });
