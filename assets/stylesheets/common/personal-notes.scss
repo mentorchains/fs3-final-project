@@ -16,6 +16,11 @@
     border: 1px solid #ddd;
     background-color: #feffdd;
     box-shadow: 7px 7px 7px rgba(0,0,0,.1);
+    form {
+        // display buttons under textarea
+        display: flex;
+        flex-direction: column;
+    }
     textarea {
         background-color: #feffdd;
         min-width: 200px;
