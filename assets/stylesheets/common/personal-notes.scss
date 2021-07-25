@@ -5,6 +5,7 @@
     position:fixed;
     right: 0;
     top: 45%;
+    border-radius:8px;
 }
 
 #note-body {
@@ -16,20 +17,17 @@
     border: 1px solid #ddd;
     background-color: #feffdd;
     box-shadow: 7px 7px 7px rgba(0,0,0,.1);
+    border-radius:8px;
     form {
         // display buttons under textarea
         display: flex;
         flex-direction: column;
-    }
-    textarea {
-        background-color: #feffdd;
-        min-width: 200px;
-        min-height: 200px;
-    }
-    .note-body-buttons {
-        float: right;
-        margin-top:-2%;
-        margin-bottom: 1.5%;
+        textarea {
+            background-color: #feffdd;
+            min-width: 200px;
+            min-height: 200px;
+            border-radius:8px;
+        }
     }
 }
 
@@ -62,6 +60,7 @@
         padding: 0 0.25em;
         margin-top:0.5em;
         border: 1px solid var(--primary-medium);
+        border-radius:8px;
         #notes-search {
             margin:0;
             width:100%;
