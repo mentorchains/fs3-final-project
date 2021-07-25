@@ -10,3 +10,35 @@
       </div>
   </form>
 </div>
+
+<div id="quick-notes-container">
+  <h1>Personal Notes</h1>
+  <div class='notes-search-input'>
+    <input id='notes-search' type='text' placeholder='search notes'>
+    {{d-icon 'search'}}
+  </div>
+  <ul>
+    <li>
+      <a>
+        {{d-icon 'sticky-note'}}
+        Sticky Note 1
+      </a>
+    </li>
+    <li>
+      <a>
+        {{d-icon 'sticky-note'}}
+        Sticky Note 2
+      </a>
+    </li>
+    <li>
+      <a>
+        {{d-icon 'sticky-note'}}
+        Sticky Note 3
+      </a>
+    </li>
+  </ul>   
+  <a class="widget-link btn btn-default btn-icon no-text show-all" title="view all notes">
+    {{d-icon 'angle-down'}}
+  </a>
+</div>
+  
