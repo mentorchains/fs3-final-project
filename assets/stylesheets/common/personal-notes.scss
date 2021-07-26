@@ -1,5 +1,5 @@
 :root {
-    --note-background: #feffdd;
+    --note-background: #fdfd96;
 }
 
 .personal-notes {
@@ -30,7 +30,9 @@
             background-color: var(--note-background);
             min-width: 200px;
             min-height: 200px;
-            border-radius:8px;
+            border-bottom-left-radius:8px;
+            border-bottom-right-radius:8px;
+            border-top:0;
         }
     }
 }
@@ -97,21 +99,41 @@
 
 #color-choice-container {
     display: flex;
-    justify-content: space-around;
     .color-choice {
         width: 22px;
         height: 22px;
-        border-radius: 20px;
-        border: .5px solid black;
-        margin: 2px;
+        flex-grow:1;
+        border: 1px solid var(--primary-medium);
+        border-right:0;
     }
-    #original-color {
-        background-color: #feffdd;
+    #first-color {
+        border-top-left-radius:8px;
+        background-color:white;
     }
-    #blanchedalmond {
-        background-color: blanchedalmond;
+    #second-color {
+        background-color:blanchedalmond;
     }
-    #greenyellow {
-        background-color: greenyellow;
+    #third-color {
+        background-color: #fdfd96;
+    }
+    #fourth-color {
+        background-color: pink;
+    }
+    #fifth-color {
+        background-color: lightsalmon;
+    }
+    #sixth-color {
+        background-color:paleturquoise;
+    }
+    #seventh-color {
+        background-color:palegreen;
+    }
+    #eighth-color {
+        background-color:plum;
+    }
+    #ninth-color {
+        border-top-right-radius:8px;
+        border-right: 1px solid var(--primary-medium);
+        background-color:lightgrey;
     }
 }
