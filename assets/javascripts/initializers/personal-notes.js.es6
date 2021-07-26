@@ -14,6 +14,16 @@ function initializePersonalNote(api) {
   });
   
   api.onPageChange(() => {
+    document.getElementById("original-color").onclick = function() {
+      document.documentElement.style.setProperty("--note-background", "#feffdd");
+    }
+    document.getElementById("blanchedalmond").onclick = function() {
+      document.documentElement.style.setProperty("--note-background", "blanchedalmond");
+    }
+    document.getElementById("greenyellow").onclick = function() {
+      document.documentElement.style.setProperty("--note-background", "greenyellow");
+    }
+
     document.getElementById('note-button').onclick = function() {
       var elem = document.getElementById("note-body");
       if (elem.style.display == "block") {

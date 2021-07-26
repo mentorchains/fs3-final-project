@@ -1,3 +1,7 @@
+:root {
+    --note-background: #feffdd;
+}
+
 .personal-notes {
 }
 
@@ -15,7 +19,7 @@
     right: 0;
     top:50%;
     border: 1px solid #ddd;
-    background-color: #feffdd;
+    background-color: var(--note-background);
     box-shadow: 7px 7px 7px rgba(0,0,0,.1);
     border-radius:8px;
     form {
@@ -23,7 +27,7 @@
         display: flex;
         flex-direction: column;
         textarea {
-            background-color: #feffdd;
+            background-color: var(--note-background);
             min-width: 200px;
             min-height: 200px;
             border-radius:8px;
@@ -88,5 +92,26 @@
     .btn {
         border-radius:8px;
         width:100%;
+    }
+}
+
+#color-choice-container {
+    display: flex;
+    justify-content: space-around;
+    .color-choice {
+        width: 22px;
+        height: 22px;
+        border-radius: 20px;
+        border: .5px solid black;
+        margin: 2px;
+    }
+    #original-color {
+        background-color: #feffdd;
+    }
+    #blanchedalmond {
+        background-color: blanchedalmond;
+    }
+    #greenyellow {
+        background-color: greenyellow;
     }
 }
