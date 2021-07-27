@@ -14,15 +14,14 @@ function initializePersonalNote(api) {
   });
   
   api.onPageChange(() => {
-    let colorIds = ['first-color', 'second-color', 'third-color', 'fourth-color', 
-                   'fifth-color', 'sixth-color', 'seventh-color', 'eighth-color', 'ninth-color'];
-    let colors = ['white', 'blanchedalmond', '#fdfd96', 'pink', '#ffc4ae', 'paleturquoise', 'palegreen', 'plum', 'lightgrey'];
+    let colorIds = ['first-color', 'second-color', 'third-color', 'fourth-color', 'fifth-color'];
+    let colors = ['#fdfd96','pink','paleturquoise','palegreen','lightgrey'];
     for (let i = 0; i < colorIds.length; i++) {
       document.getElementById(`${colorIds[i]}`).onclick = function() {
         document.documentElement.style.setProperty("--note-background", `${colors[i]}`);
       }
     }
-    
+
     document.getElementById('note-button').onclick = function() {
       var elem = document.getElementById("note-body");
       if (elem.style.display == "block") {

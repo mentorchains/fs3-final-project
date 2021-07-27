@@ -100,7 +100,6 @@
 #color-choice-container {
     display: flex;
     .color-choice {
-        width: 22px;
         height: 22px;
         flex-grow:1;
         border: 1px solid var(--primary-medium);
@@ -108,30 +107,18 @@
     }
     #first-color {
         border-top-left-radius:8px;
-        background-color:white;
+        background-color:#fdfd96;
     }
     #second-color {
-        background-color:blanchedalmond;
+        background-color:pink;
     }
     #third-color {
-        background-color: #fdfd96;
+        background-color: paleturquoise;
     }
     #fourth-color {
-        background-color: pink;
+        background-color: palegreen;
     }
     #fifth-color {
-        background-color: #ffc4ae;
-    }
-    #sixth-color {
-        background-color:paleturquoise;
-    }
-    #seventh-color {
-        background-color:palegreen;
-    }
-    #eighth-color {
-        background-color:plum;
-    }
-    #ninth-color {
         border-top-right-radius:8px;
         border-right: 1px solid var(--primary-medium);
         background-color:lightgrey;
