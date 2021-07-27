@@ -113,9 +113,19 @@
         #notes-search {
             margin:0;
             width:100%;
-            border: none;
+            // border: none;
+        }
+        &:active, &:focus, &:hover {
+            border: 2px solid var(--tertiary);
         }
     }
+
+    input[type="text"]#notes-search, input[type="text"]#notes-search:focus {
+        border: none;
+        background: transparent;
+        outline: none;
+    }
+
     ul {
         list-style:none;
         margin: 0.5em 0;
