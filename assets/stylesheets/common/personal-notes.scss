@@ -20,9 +20,6 @@
     box-shadow: 7px 7px 7px rgba(0,0,0,.1);
     border-radius:8px;
     overflow: hidden;
-    resize: both;
-    min-width: 200px;
-    min-height: 200px;
     form {
         // display buttons under textarea
         display: flex;
@@ -30,8 +27,9 @@
         textarea {
             background-color: var(--note-background);
             border-top:0;
-            resize:none;
-            width: inherit;
+            overflow: auto;
+            width: 20rem;
+            height: 15rem;
             border-bottom-left-radius:8px;
             border-bottom-right-radius:8px;
         }
@@ -115,9 +113,19 @@
         #notes-search {
             margin:0;
             width:100%;
-            border: none;
+            // border: none;
+        }
+        &:active, &:focus, &:hover {
+            border: 2px solid var(--tertiary);
         }
     }
+
+    input[type="text"]#notes-search, input[type="text"]#notes-search:focus {
+        border: none;
+        background: transparent;
+        outline: none;
+    }
+
     ul {
         list-style:none;
         margin: 0.5em 0;
