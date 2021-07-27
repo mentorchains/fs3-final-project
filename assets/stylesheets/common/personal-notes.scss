@@ -7,8 +7,6 @@
 
 #note-button {
     position:fixed;
-    right: 0;
-    top: 45%;
     border-radius:8px;
 }
 
@@ -16,24 +14,71 @@
     display: none;
     position:fixed;
     z-index: 1;
-    right: 0;
-    top:50%;
+    top:13%;
     border: 1px solid #ddd;
     background-color: var(--note-background);
     box-shadow: 7px 7px 7px rgba(0,0,0,.1);
     border-radius:8px;
+    overflow: hidden;
+    resize: both;
+    min-width: 200px;
+    min-height: 200px;
     form {
         // display buttons under textarea
         display: flex;
         flex-direction: column;
         textarea {
             background-color: var(--note-background);
-            min-width: 200px;
-            min-height: 200px;
+            border-top:0;
+            resize:none;
+            width: inherit;
             border-bottom-left-radius:8px;
             border-bottom-right-radius:8px;
-            border-top:0;
         }
+        .note-body-buttons {
+            display: flex;
+            height: 25px;
+            #transparent-choice {
+                border: 1px solid var(--primary-medium);
+                width: 25px;
+                background: repeating-conic-gradient(#808080 0% 25%, transparent 0% 50%) 
+                            50% / 20px 20px;
+                background-size:13px 13px;
+                background-color:white;
+                margin-right: 10px;
+            }
+            #save {
+                border: 1px solid var(--primary-medium);
+            }
+        }
+    }
+}
+
+#color-choice-container {
+    display: flex;
+    .color-choice {
+        height: 22px;
+        flex-grow:1;
+        border: 1px solid var(--primary-medium);
+        border-right:0;
+    }
+    #first-color {
+        border-top-left-radius:8px;
+        background-color:#fdfd96;
+    }
+    #second-color {
+        background-color:pink;
+    }
+    #third-color {
+        background-color: paleturquoise;
+    }
+    #fourth-color {
+        background-color: palegreen;
+    }
+    #fifth-color {
+        border-top-right-radius:8px;
+        border-right: 1px solid var(--primary-medium);
+        background-color:lightgrey;
     }
 }
 
@@ -94,33 +139,5 @@
     .btn {
         border-radius:8px;
         width:100%;
-    }
-}
-
-#color-choice-container {
-    display: flex;
-    .color-choice {
-        height: 22px;
-        flex-grow:1;
-        border: 1px solid var(--primary-medium);
-        border-right:0;
-    }
-    #first-color {
-        border-top-left-radius:8px;
-        background-color:#fdfd96;
-    }
-    #second-color {
-        background-color:pink;
-    }
-    #third-color {
-        background-color: paleturquoise;
-    }
-    #fourth-color {
-        background-color: palegreen;
-    }
-    #fifth-color {
-        border-top-right-radius:8px;
-        border-right: 1px solid var(--primary-medium);
-        background-color:lightgrey;
     }
 }

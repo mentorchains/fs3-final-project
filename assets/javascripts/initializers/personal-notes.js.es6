@@ -14,8 +14,8 @@ function initializePersonalNote(api) {
   });
   
   api.onPageChange(() => {
-    let colorIds = ['first-color', 'second-color', 'third-color', 'fourth-color', 'fifth-color'];
-    let colors = ['#fdfd96','pink','paleturquoise','palegreen','lightgrey'];
+    let colorIds = ['first-color', 'second-color', 'third-color', 'fourth-color', 'fifth-color', 'transparent-choice'];
+    let colors = ['#fdfd96','pink','paleturquoise','palegreen','lightgrey', 'transparent'];
     for (let i = 0; i < colorIds.length; i++) {
       document.getElementById(`${colorIds[i]}`).onclick = function() {
         document.documentElement.style.setProperty("--note-background", `${colors[i]}`);
