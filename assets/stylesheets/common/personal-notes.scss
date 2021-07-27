@@ -20,9 +20,7 @@
     box-shadow: 7px 7px 7px rgba(0,0,0,.1);
     border-radius:8px;
     overflow: hidden;
-    resize: both;
     min-width: 200px;
-    min-height: 200px;
     form {
         // display buttons under textarea
         display: flex;
@@ -30,7 +28,7 @@
         textarea {
             background-color: var(--note-background);
             border-top:0;
-            resize:none;
+            overflow: auto;
             width: inherit;
             border-bottom-left-radius:8px;
             border-bottom-right-radius:8px;
