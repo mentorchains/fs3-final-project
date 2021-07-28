@@ -20,7 +20,7 @@ function initializePersonalNote(api) {
           h('li', h('a', [icon, 'Sticky Note 2'])),
           h('li', h('a', [icon, 'Sticky Note 3'])),
         ]),
-        h('a', {title: 'view all notes', id:'all-notes-icon'}, iconNode('angle-down')),
+        h('a', {title: 'view all notes'}, iconNode('angle-down')),
       ]);
     },
   
