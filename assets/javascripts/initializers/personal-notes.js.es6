@@ -1,16 +1,58 @@
 import { withPluginApi } from "discourse/lib/plugin-api";
 import { iconNode } from "discourse-common/lib/icon-library";
+import { h } from 'virtual-dom';
 let icon = iconNode('sticky-note');
 
 function initializePersonalNote(api) {
   // https://github.com/discourse/discourse/blob/master/app/assets/javascripts/discourse/lib/plugin-api.js.es6
-  api.decorateWidget('header-icons:before', helper => {
-    // note-dropdown 
-    return helper.h('li.header-dropdown-toggle', [
-      helper.h('a.icon.btn-flat#note-dropdown', {
+  api.createWidget('note-menu', {
+    tagName: 'div.note-panel',
+
+    panelContents() {
+      return h('div#quick-notes-container', [
+        h('h1', 'Personal Notes'),
+        h('div.notes-search-input', [
+          h('input#notes-search', {type: 'text', placeholder: 'search notes'}),
+          iconNode('search'),
+        ]),
+        h('ul', [
+          h('li', h('a', [icon, 'Sticky Note 1'])),
+          h('li', h('a', [icon, 'Sticky Note 2'])),
+          h('li', h('a', [icon, 'Sticky Note 3'])),
+        ]),
+        h('a', {title: 'view all notes'}, iconNode('angle-down')),
+      ]);
+    },
+  
+    html() {
+      return this.attach('menu-panel', {
+        contents: () => this.panelContents()
+      });
+    },
+  
+    clickOutside() {
+      this.sendWidgetAction('toggleNote');
+    }
+  });
+
+  api.decorateWidget('header-icons:after', function(helper) {
+    const headerState = helper.widget.parentWidget.state;
+    let contents = [];
+      contents.push(helper.attach('header-dropdown', {
         title: 'take notes',
-      }, icon),
-    ]);
+        icon: 'sticky-note',
+        active: headerState.noteVisible,
+        iconId: 'toggle-note-menu',
+        action: 'toggleNote',
+      }));
+      if (headerState.noteVisible) {
+              contents.push(helper.attach('note-menu'));
+      }
+      return contents;
+  });
+  
+  api.attachWidgetAction('header', 'toggleNote', function() {
+    this.state.noteVisible = !this.state.noteVisible;
   });
   
   api.onPageChange(() => {
@@ -24,15 +66,6 @@ function initializePersonalNote(api) {
 
     document.getElementById('note-button').onclick = function() {
       var elem = document.getElementById("note-body");
-      if (elem.style.display == "block") {
-        elem.style.display = "none";
-      } else {
-        elem.style.display = "block";
-      }
-    }
-
-    document.getElementById('note-dropdown').onclick = function() {
-      var elem = document.getElementById("quick-notes-container");
       if (elem.style.display == "block") {
         elem.style.display = "none";
       } else {
