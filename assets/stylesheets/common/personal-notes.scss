@@ -81,11 +81,8 @@
 }
 
 #quick-notes-container {
-    //display: flex;
     .d-icon {
         color: var(--primary-high);
-        margin-left: 75%;
-        width: 30%;
     }
 
     h1 {
@@ -97,23 +94,15 @@
 
     input[type="text"]#notes-search, input[type="text"]#notes-search:focus {
         border-radius: 8px;
-        position:absolute;
-        width: 80%;
+        width:100%;
     }
 
     ul {
-        display: inline-block;
         li {
             &:hover {
                 background-color: rgb(250, 250, 176);
                 border-radius: 8px;
             }
-        }
-    }
-    #all-notes-icon {
-        .d-icon {
-            display: inline-block;
-            margin-left: 2%;
         }
     }
 }
