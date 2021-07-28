@@ -13,7 +13,7 @@
 #note-body {
     display: none;
     position:fixed;
-    z-index: 1;
+    z-index: 999;
     top:13%;
     border: 1px solid #ddd;
     background-color: var(--note-background);
@@ -37,16 +37,19 @@
             display: flex;
             height: 25px;
             #transparent-choice {
+                padding-left: 1em;
+                margin-left: 10px;
                 border: 1px solid var(--primary-medium);
                 width: 25px;
                 background: repeating-conic-gradient(#808080 0% 25%, transparent 0% 50%) 
                             50% / 20px 20px;
                 background-size:13px 13px;
                 background-color:white;
-                margin-right: 10px;
             }
             #save {
                 border: 1px solid var(--primary-medium);
+                position: absolute;
+                right:10px;
             }
         }
     }
