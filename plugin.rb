@@ -21,5 +21,4 @@ after_initialize do
     # Map the path `/notebook` to `NotebookController`’s `index` method
     get '/personal_notes' => 'personal_notes#index'
   end
-
 end

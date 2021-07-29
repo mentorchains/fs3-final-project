@@ -1,5 +1,4 @@
-class PersonalNotesController < ::ApplicationController
-    def index
-    end
+class PersonalNotesController < ApplicationController
+  def index
+  end
 end
-
