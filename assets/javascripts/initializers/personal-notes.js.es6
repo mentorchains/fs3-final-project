@@ -56,8 +56,10 @@ function initializePersonalNote(api) {
   });
   
   api.onPageChange(() => {
-    let colorIds = ['first-color', 'second-color', 'third-color', 'fourth-color', 'fifth-color', 'transparent-choice'];
-    let colors = ['#fdfd96','pink','paleturquoise','palegreen','lightgrey', 'transparent'];
+    // let colorIds = ['first-color', 'second-color', 'third-color', 'fourth-color', 'fifth-color', 'transparent-choice'];
+    let colorIds = ['first-color', 'second-color', 'third-color', 'fourth-color', 'fifth-color'];
+    // let colors = ['#fdfd96','pink','paleturquoise','palegreen','lightgrey', 'transparent'];
+    let colors = ['#fdfd96','pink','paleturquoise','palegreen','lightgrey'];
     for (let i = 0; i < colorIds.length; i++) {
       document.getElementById(`${colorIds[i]}`).onclick = function() {
         document.documentElement.style.setProperty("--note-background", `${colors[i]}`);
@@ -70,6 +72,17 @@ function initializePersonalNote(api) {
         elem.style.display = "none";
       } else {
         elem.style.display = "block";
+      }
+    }
+
+    document.getElementById('fonts-selector').onchange = function() {
+      var x = document.getElementById("fonts-selector").value;
+      if (x == "TimesNewRomans") {
+        document.getElementById("note").style = "font-family: Times New Romans";
+      } else if (x == "Arial") {
+        document.getElementById("note").style = "font-family: Arial";
+      } else if (x == "Courier") {
+        document.getElementById("note").style = "font-family: Courier";
       }
     }
   });

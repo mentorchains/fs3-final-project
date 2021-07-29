@@ -13,7 +13,13 @@
     </div>
     <textarea id="note" rows="6" cols="80"></textarea>
     <div class = 'note-body-buttons'>
-      <div id="transparent-choice"></div>
+      {{!-- <div id="transparent-choice"></div> --}}
+      <select name="fonts" id="fonts-selector">
+        <option value="ChooseFont">Choose Font:</option>
+        <option value="TimesNewRomans" id="first-font">Times New Romans</option>
+        <option value="Arial" id="second-font">Arial</option>
+        <option value="Courier" id="third-font">Courier</option>
+      </select>
       <input type="submit" value="Save" id="save">
     </div>
   </form>

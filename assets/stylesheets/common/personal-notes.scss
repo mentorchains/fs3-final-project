@@ -37,16 +37,19 @@
         .note-body-buttons {
             display: flex;
             height: 25px;
-            #transparent-choice {
-                padding-left: 1em;
-                margin-left: 10px;
-                border: 1px solid var(--primary-medium);
-                width: 25px;
-                background: repeating-conic-gradient(#808080 0% 25%, transparent 0% 50%) 
-                            50% / 20px 20px;
-                background-size:13px 13px;
-                background-color:white;
+            select {
+                height: fit-content;
             }
+            // #transparent-choice {
+            //     padding-left: 1em;
+            //     margin-left: 10px;
+            //     border: 1px solid var(--primary-medium);
+            //     width: 25px;
+            //     background: repeating-conic-gradient(#808080 0% 25%, transparent 0% 50%) 
+            //                 50% / 20px 20px;
+            //     background-size:13px 13px;
+            //     background-color:white;
+            // }
             #save {
                 border: 1px solid var(--primary-medium);
                 position: absolute;
