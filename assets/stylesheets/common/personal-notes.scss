@@ -1,2 +1,134 @@
+:root {
+    --note-background: #fdfd96;
+}
+
 .personal-notes {
+}
+
+#note-button {
+    position:fixed;
+    border-radius:8px;
+}
+
+#note-body {
+    display: none;
+    position:fixed;
+    z-index: 999;
+    top:13%;
+    border: 1px solid #ddd;
+    background-color: var(--note-background);
+    box-shadow: 7px 7px 7px rgba(0,0,0,.1);
+    border-radius:8px;
+    form {
+        // display buttons under textarea
+        display: flex;
+        flex-direction: column;
+        textarea {
+            background-color: var(--note-background);
+            border-top:0;
+            overflow: auto;
+            width: 12rem;
+            height: 10rem;
+            min-width: 12rem;
+            min-height: 10rem;
+            border-bottom-left-radius:8px;
+            border-bottom-right-radius:8px;
+        }
+        .note-body-buttons {
+            display: flex;
+            height: 25px;
+            #transparent-choice {
+                padding-left: 1em;
+                margin-left: 10px;
+                border: 1px solid var(--primary-medium);
+                width: 25px;
+                background: repeating-conic-gradient(#808080 0% 25%, transparent 0% 50%) 
+                            50% / 20px 20px;
+                background-size:13px 13px;
+                background-color:white;
+            }
+            #save {
+                border: 1px solid var(--primary-medium);
+                position: absolute;
+                right:10px;
+            }
+        }
+    }
+}
+
+#color-choice-container {
+    display: flex;
+    .color-choice {
+        height: 22px;
+        flex-grow:1;
+        border: 1px solid var(--primary-medium);
+        border-right:0;
+    }
+    #first-color {
+        border-top-left-radius:8px;
+        background-color:#fdfd96;
+    }
+    #second-color {
+        background-color:pink;
+    }
+    #third-color {
+        background-color: paleturquoise;
+    }
+    #fourth-color {
+        background-color: palegreen;
+    }
+    #fifth-color {
+        border-top-right-radius:8px;
+        border-right: 1px solid var(--primary-medium);
+        background-color:lightgrey;
+    }
+}
+
+.note-panel .menu-panel {
+    padding: 0;
+    border-radius: 8px;
+}
+
+#quick-notes-container {
+    h1 {
+        border-top-left-radius:8px;
+        border-top-right-radius:8px;
+        background-color: #fdfd96;
+        font-size: 1.5rem;
+        font-weight: 550;
+        padding: 0.25rem 0;
+    }
+    
+    .d-icon {
+        height:0.8em;
+        width:0.8em;
+        color: var(--primary-medium);
+    }
+    .notes-search-input {
+        margin-top: 1rem;
+        input[type="text"]#notes-search {
+            border-radius: 8px;
+            margin:0;
+            width:80%;
+            outline:none;
+        }
+        .d-icon {
+            margin-left:2%;
+        }
+    }
+    ul {
+        margin-top: 0.5rem;
+        li {
+            line-height:2;
+            text-align:left;
+            margin: 0 5%;
+            &:hover {
+                background-color: var(--note-background);
+                border-radius: 8px;
+            }
+            .d-icon {
+                margin:0 2%;
+            }
+        }
+    }
 }
