@@ -14,12 +14,30 @@
     <textarea id="note" rows="6" cols="80"></textarea>
     <div class = 'note-body-buttons'>
       {{!-- <div id="transparent-choice"></div> --}}
+      <label for="fonts">Font:</label>
       <select name="fonts" id="fonts-selector">
-        <option value="ChooseFont" disabled selected>Choose Font:</option>
-        <option value="TimesNewRomans" id="first-font">Times New Romans</option>
+        <option value="font-default" disabled selected>Default</option>
+        <option value="TimesNewRoman" id="first-font">Times New Roman</option>
         <option value="Arial" id="second-font">Arial</option>
         <option value="Courier" id="third-font">Courier</option>
       </select>
+
+      <label for="font-styles">Font Style:</label>
+      <select name="font-styles" id="font-styles-selector">
+        <option value="style-default" disabled selected>Default</option>
+        <option value="normal" id="first-style">Normal</option>
+        <option value="italic" id="second-style">Italic</option>
+        <option value="bold" id="third-style">Bold</option>
+      </select>
+
+      <label for="font-sizes">Size:</label>
+      <select name="font-sizes" id="font-sizes-selector">
+        <option value="size-default" disabled selected>Default</option>
+        <option value="small" id="first-size">Small</option>
+        <option value="medium" id="second-size">Medium</option>
+        <option value="large" id="third-size">Large</option>
+      </select>
+
       <input type="submit" value="Save" id="save">
     </div>
   </form>

@@ -76,13 +76,35 @@ function initializePersonalNote(api) {
     }
 
     document.getElementById('fonts-selector').onchange = function() {
-      var x = document.getElementById("fonts-selector").value;
-      if (x == "TimesNewRomans") {
-        document.getElementById("note").style = "font-family: Times New Romans";
+      let x = document.getElementById("fonts-selector").value;
+      if (x == "TimesNewRoman") {
+        document.getElementById("note").style = "font-family: Times New Roman";
       } else if (x == "Arial") {
         document.getElementById("note").style = "font-family: Arial";
       } else if (x == "Courier") {
         document.getElementById("note").style = "font-family: Courier";
+      }
+    }
+
+    document.getElementById('font-styles-selector').onchange = function() {
+      let x = document.getElementById("font-styles-selector").value;
+      if (x == "normal") {
+        document.getElementById("note").style = "font-weight: normal";
+      } else if (x == "italic") {
+        document.getElementById("note").style = "font-style: italic";
+      } else if (x == "bold") {
+        document.getElementById("note").style = "font-weight: bold";
+      }
+    }
+
+    document.getElementById('font-sizes-selector').onchange = function() {
+      let x = document.getElementById("font-sizes-selector").value;
+      if (x == "small") {
+        document.getElementById("note").style = "font-size: small";
+      } else if (x == "medium") {
+        document.getElementById("note").style = "font-size: medium";
+      } else if (x == "large") {
+        document.getElementById("note").style = "font-size: large";
       }
     }
   });
