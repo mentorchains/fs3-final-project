@@ -3,7 +3,7 @@
 </button>
 
 <div id="note-body">
-  <form {{ action 'createNote' note on='submit' }}>
+  <form id="form-id" {{ action 'createNote' content this.id on='submit' }}>
     <div id="color-choice-container">
       <div class="color-choice" id="first-color"></div>
       <div class="color-choice" id="second-color"></div>
@@ -11,7 +11,7 @@
       <div class="color-choice" id="fourth-color"></div>
       <div class="color-choice" id="fifth-color"></div>
     </div>
-    <textarea id="note" rows="6" cols="80"></textarea>
+    <textarea id="note" rows="6" cols="80" value=content></textarea>
     <div class='note-body-buttons'>
       <div id="transparent-choice"></div>
       <input type="submit" value="Save" id="0">
