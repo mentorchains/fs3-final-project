@@ -77,7 +77,11 @@ function initializePersonalNote(api) {
       let font = document.getElementById('fonts-selector').value;
       let font_style = document.getElementById('font-styles-selector').value;
       let font_size = document.getElementById('font-sizes-selector').value;
-
+      
+      if (font == 'font-default' && font_style == 'style-default' && font_size == 'size-default') {
+        return;
+      }
+      
       if (font_style=='italic') {
         document.getElementById("note").style = "font-family: "+ font + ";\n" + "font-style: " + font_style + ";\n" + "font-size: " + font_size + ";";
       } else {
