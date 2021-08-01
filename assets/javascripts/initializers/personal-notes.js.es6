@@ -120,6 +120,19 @@ function initializePersonalNote(api) {
         document.getElementById("note").style = "font-family: "+ font + ";\n" + "font-weight: " + font_style + ";\n" + "font-size: " + font_size + ";";
       }
     }
+
+    document.getElementById('note-body-settings-buttons').onclick = function() {
+      let x = document.getElementById("note-body-styling-buttons");
+      let formWindow = document.getElementById("form");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+        formWindow.style.height = "235px";
+      } else {
+        x.style.display = "block";
+        
+        formWindow.style.height = "429.17px";
+      }
+    }
   });
 }
 
