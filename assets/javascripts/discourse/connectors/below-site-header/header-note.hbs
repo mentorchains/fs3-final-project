@@ -12,9 +12,12 @@
       <div class="color-choice" id="fifth-color"></div>
     </div>
     <textarea id="note" rows="6" cols="80"></textarea>
-    <input type="submit" value="Save" id="save">
-    <div class = 'note-body-buttons'>
-      <div id="note-body-styling-buttons">
+    <div id="control-panel">
+      <button type="button" id="styleSettings">Show Settings</button>
+      <input type="submit" value="Save Note" id="save">
+    </div>
+    <div class = 'note-body-buttons' id = 'note-body-buttons'>
+      {{!-- <div id="note-body-styling-buttons"> --}}
         {{!-- <div id="transparent-choice"></div> --}}
         <label for="fonts">Font:</label>
         <select name="fonts" id="fonts-selector">
@@ -39,13 +42,8 @@
           <option value="medium" id="second-size">Medium</option>
           <option value="large" id="third-size">Large</option>
         </select>
-      </div>
-      
-      <div id='note-body-settings-buttons'>
-        <button type="button" id="saveStyle">Save Style</button>
-        <input type="button" value="Show Settings" id="personalize">
-      </div>
-      
+      {{!-- </div> --}}
+      <button type="button" id="saveStyle">Save Style</button>
       
     </div>
   </form>

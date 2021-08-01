@@ -121,16 +121,26 @@ function initializePersonalNote(api) {
       }
     }
 
-    document.getElementById('note-body-settings-buttons').onclick = function() {
-      let x = document.getElementById("note-body-styling-buttons");
-      let formWindow = document.getElementById("form");
-      if (x.style.display === "block") {
-        x.style.display = "none";
-        formWindow.style.height = "235px";
-      } else {
-        x.style.display = "block";
+    // document.getElementById('note-body-settings-buttons').onclick = function() {
+    //   let x = document.getElementById("note-body-styling-buttons");
+    //   let formWindow = document.getElementById("form");
+    //   if (x.style.display === "block") {
+    //     x.style.display = "none";
+    //     formWindow.style.height = "235px";
+    //   } else {
+    //     x.style.display = "block";
         
-        formWindow.style.height = "429.17px";
+    //     formWindow.style.height = "429.17px";
+    //   }
+    // }
+    document.getElementById('styleSettings').onclick = function() {
+      var elem = document.getElementById("note-body-buttons");
+      if (elem.style.display == "flex") {
+        document.getElementById("styleSettings").innerHTML = "Show Settings";
+        elem.style.display = "none";
+      } else {
+        document.getElementById("styleSettings").innerHTML = "Hide Settings";
+        elem.style.display = "flex";
       }
     }
   });

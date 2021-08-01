@@ -34,14 +34,42 @@
             border-bottom-left-radius:8px;
             border-bottom-right-radius:8px;
         }
-        .note-body-buttons {
+        #control-panel {
             display: flex;
+            #styleSettings {
+                flex:1;
+                border: 1px solid var(--primary-medium);
+                border-radius:4px;
+                margin: 0 10px 0 10px;
+            }
+            #styleSettings:hover {
+                color: var(--secondary);
+                background-color: var(--primary-medium);
+                // border: 1px solid var(--primary-very-high);
+            }
+            input[type="submit"], input[type="reset"], input[type="button"], input[type="radio"], input[type="checkbox"] {
+                flex: 1;
+                border: 1px solid var(--primary-medium);
+                border-radius:4px;
+                width: auto;
+                margin: 0 10px 0 0;
+            }
+            #save:hover {
+                background-color: var(--danger);
+                color: var(--secondary);
+            }
+        }
+        
+        .note-body-buttons {
+            display: none;
             flex-direction: column;
             height: 13rem;
             margin: 10px;
             select {
                 height: fit-content;
                 border-radius:4px;
+                display: flex;
+                flex:1
                 //width: max-content;
             }
             /*
@@ -60,6 +88,10 @@
                 border: 1px solid var(--primary-medium);
                 border-radius:4px;
             }
+            #saveStyle:hover {
+                color: var(--secondary);
+                background-color: var(--primary-medium);
+            }
             // #save {
             //     border: 1px solid var(--primary-medium);
             //     border-radius:4px;
@@ -70,12 +102,7 @@
         }
     }
 }
-input[type="submit"], input[type="reset"], input[type="button"], input[type="radio"], input[type="checkbox"] {
-    border: 1px solid var(--primary-medium);
-    border-radius:4px;
-    width: auto;
-    margin: 0 10px 0 10px;
-}
+
 
 #color-choice-container {
     display: flex;
