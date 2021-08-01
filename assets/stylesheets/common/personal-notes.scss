@@ -20,7 +20,6 @@
     box-shadow: 7px 7px 7px rgba(0,0,0,.1);
     border-radius:8px;
     form {
-        // display buttons under textarea
         display: flex;
         flex-direction: column;
         textarea {
@@ -34,28 +33,30 @@
             border-bottom-left-radius:8px;
             border-bottom-right-radius:8px;
         }
+        
+        input[type="submit"], button[type="button"] {
+            flex: 1;
+            border: 1px solid var(--primary-medium);
+            border-radius:4px;
+        }
+        
         #control-panel {
             display: flex;
             #styleSettings {
-                flex:1;
-                border: 1px solid var(--primary-medium);
-                border-radius:4px;
-                margin: 0 10px 0 10px;
+                margin: 0 10px;
             }
+            
             #styleSettings:hover {
-                color: var(--secondary);
                 background-color: var(--primary-medium);
-                // border: 1px solid var(--primary-very-high);
+                color: var(--secondary);
             }
-            input[type="submit"], input[type="reset"], input[type="button"], input[type="radio"], input[type="checkbox"] {
-                flex: 1;
-                border: 1px solid var(--primary-medium);
-                border-radius:4px;
-                width: auto;
-                margin: 0 10px 0 0;
+
+            #save {
+                margin-right: 10px;
             }
+
             #save:hover {
-                background-color: var(--danger);
+                background-color: var(--success);
                 color: var(--secondary);
             }
         }
@@ -66,39 +67,16 @@
             height: 13rem;
             margin: 10px;
             select {
-                height: fit-content;
+                border: 1px solid var(--primary-low-mid);
                 border-radius:4px;
                 display: flex;
-                flex:1
-                //width: max-content;
+                flex:1;
             }
-            /*
-            #transparent-choice {
-                padding-left: 1em;
-                margin-left: 10px;
-                border: 1px solid var(--primary-medium);
-                width: 25px;
-                background: repeating-conic-gradient(#808080 0% 25%, transparent 0% 50%) 
-                            50% / 20px 20px;
-                background-size:13px 13px;
-                background-color:white;
-            }
-            */
-            #saveStyle {
-                border: 1px solid var(--primary-medium);
-                border-radius:4px;
-            }
+        
             #saveStyle:hover {
+                background-color: var(--success);
                 color: var(--secondary);
-                background-color: var(--primary-medium);
             }
-            // #save {
-            //     border: 1px solid var(--primary-medium);
-            //     border-radius:4px;
-            //     margin: 0 10px;
-            //     //position: absolute;
-            //     //right:10px;
-            // }
         }
     }
 }
@@ -108,7 +86,7 @@
     display: flex;
     .color-choice {
         height: 22px;
-        flex-grow:1;
+        flex:1;
         border: 1px solid var(--primary-medium);
         border-right:0;
     }

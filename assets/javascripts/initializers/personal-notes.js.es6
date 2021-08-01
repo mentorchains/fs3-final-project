@@ -56,9 +56,7 @@ function initializePersonalNote(api) {
   });
   
   api.onPageChange(() => {
-    // let colorIds = ['first-color', 'second-color', 'third-color', 'fourth-color', 'fifth-color', 'transparent-choice'];
     let colorIds = ['first-color', 'second-color', 'third-color', 'fourth-color', 'fifth-color'];
-    // let colors = ['#fdfd96','pink','paleturquoise','palegreen','lightgrey', 'transparent'];
     let colors = ['#fdfd96','pink','paleturquoise','palegreen','lightgrey'];
     for (let i = 0; i < colorIds.length; i++) {
       document.getElementById(`${colorIds[i]}`).onclick = function() {
@@ -75,45 +73,11 @@ function initializePersonalNote(api) {
       }
     }
 
-    // document.getElementById('fonts-selector').onchange = function() {
-    //   let x = document.getElementById("fonts-selector").value;
-    //   if (x == "TimesNewRoman") {
-    //     document.getElementById("note").style = "font-family: Times New Roman";
-    //   } else if (x == "Arial") {
-    //     document.getElementById("note").style = "font-family: Arial";
-    //   } else if (x == "Courier") {
-    //     document.getElementById("note").style = "font-family: Courier";
-    //   }
-    // }
-
-    // document.getElementById('font-styles-selector').onchange = function() {
-    //   let x = document.getElementById("font-styles-selector").value;
-    //   if (x == "normal") {
-    //     document.getElementById("note").style = "font-weight: normal";
-    //   } else if (x == "italic") {
-    //     document.getElementById("note").style = "font-style: italic";
-    //   } else if (x == "bold") {
-    //     document.getElementById("note").style = "font-weight: bold";
-    //   }
-    // }
-
-    // document.getElementById('font-sizes-selector').onchange = function() {
-    //   let x = document.getElementById("font-sizes-selector").value;
-    //   if (x == "small") {
-    //     document.getElementById("note").style = "font-size: small";
-    //   } else if (x == "medium") {
-    //     document.getElementById("note").style = "font-size: medium";
-    //   } else if (x == "large") {
-    //     document.getElementById("note").style = "font-size: large";
-    //   }
-    // }
     document.getElementById('saveStyle').onclick = function() {
       let font = document.getElementById('fonts-selector').value;
       let font_style = document.getElementById('font-styles-selector').value;
       let font_size = document.getElementById('font-sizes-selector').value;
-      // console.log(font);
-      // console.log(font_style);
-      // console.log(font_size);
+
       if (font_style=='italic') {
         document.getElementById("note").style = "font-family: "+ font + ";\n" + "font-style: " + font_style + ";\n" + "font-size: " + font_size + ";";
       } else {
@@ -121,20 +85,8 @@ function initializePersonalNote(api) {
       }
     }
 
-    // document.getElementById('note-body-settings-buttons').onclick = function() {
-    //   let x = document.getElementById("note-body-styling-buttons");
-    //   let formWindow = document.getElementById("form");
-    //   if (x.style.display === "block") {
-    //     x.style.display = "none";
-    //     formWindow.style.height = "235px";
-    //   } else {
-    //     x.style.display = "block";
-        
-    //     formWindow.style.height = "429.17px";
-    //   }
-    // }
     document.getElementById('styleSettings').onclick = function() {
-      var elem = document.getElementById("note-body-buttons");
+      let elem = document.getElementById("note-body-buttons");
       if (elem.style.display == "flex") {
         document.getElementById("styleSettings").innerHTML = "Show Settings";
         elem.style.display = "none";
