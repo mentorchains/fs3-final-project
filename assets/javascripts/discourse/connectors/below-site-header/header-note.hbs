@@ -3,7 +3,11 @@
 </button>
 
 <div id="note-body">
+<<<<<<< HEAD
   <form id="form" action="/action_page.php">
+=======
+  <form id="form-id" {{ action 'createNote' content this.id on='submit' }}>
+>>>>>>> d686cdab6b8ff1e3098b2b5f0dd9af130d3daf60
     <div id="color-choice-container">
       <div class="color-choice" id="first-color"></div>
       <div class="color-choice" id="second-color"></div>
@@ -11,6 +15,7 @@
       <div class="color-choice" id="fourth-color"></div>
       <div class="color-choice" id="fifth-color"></div>
     </div>
+<<<<<<< HEAD
     <textarea id="note" rows="6" cols="80"></textarea>
     <div id="control-panel">
       <button type="button" id="styleSettings">Show Settings</button>
@@ -42,6 +47,12 @@
       </select>
 
       <button type="button" id="saveStyle">Save Style</button>
+=======
+    <textarea id="note" rows="6" cols="80" value=content></textarea>
+    <div class='note-body-buttons'>
+      <div id="transparent-choice"></div>
+      <input type="submit" value="Save" id="0">
+>>>>>>> d686cdab6b8ff1e3098b2b5f0dd9af130d3daf60
     </div>
   </form>
 </div>
