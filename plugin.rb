@@ -1,7 +1,14 @@
 # name: notebook
 # version: 0.7.0
 
+<<<<<<< HEAD
 enabled_site_setting :notebook_enabled
+=======
+register_svg_icon "sticky-note" if respond_to?(:register_svg_icon)
+register_asset 'stylesheets/common/personal-notes.scss'
+register_asset 'stylesheets/desktop/personal-notes.scss', :desktop
+register_asset 'stylesheets/mobile/personal-notes.scss', :mobile
+>>>>>>> ebb05942e106f3ae560ab40d0ffa6aed3de7c779
 
 register_asset 'stylesheets/notebook.css'
 

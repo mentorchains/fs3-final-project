@@ -1,2 +1,160 @@
-.personal-notes {
+:root {
+    --note-background: #fdfd96;
+}
+
+// .personal-notes {
+// }
+
+#note-button {
+    position:fixed;
+    border-radius:8px;
+}
+
+#note-body {
+    display: none;
+    position:fixed;
+    z-index: 999;
+    top:13%;
+    border: 1px solid #ddd;
+    background-color: var(--note-background);
+    box-shadow: 7px 7px 7px rgba(0,0,0,.1);
+    border-radius:8px;
+    form {
+        display: flex;
+        flex-direction: column;
+        textarea {
+            background-color: var(--note-background);
+            border-top:0;
+            overflow: auto;
+            width: 16rem;
+            height: 10rem;
+            min-width: 16rem;
+            min-height: 10rem;
+            border-bottom-left-radius:8px;
+            border-bottom-right-radius:8px;
+        }
+        
+        input[type="submit"], button[type="button"] {
+            flex: 1;
+            border: 1px solid var(--primary-medium);
+            border-radius:4px;
+        }
+        
+        #control-panel {
+            display: flex;
+            #styleSettings {
+                margin: 0 10px;
+            }
+            
+            #styleSettings:hover {
+                background-color: var(--primary-medium);
+                color: var(--secondary);
+            }
+
+            #save {
+                margin-right: 10px;
+            }
+
+            #save:hover {
+                background-color: var(--success);
+                color: var(--secondary);
+            }
+        }
+        
+        .note-body-buttons {
+            display: none;
+            flex-direction: column;
+            height: 13rem;
+            margin: 10px;
+            select {
+                border: 1px solid var(--primary-low-mid);
+                border-radius:4px;
+                display: flex;
+                flex:1;
+            }
+        
+            #saveStyle:hover {
+                background-color: var(--success);
+                color: var(--secondary);
+            }
+        }
+    }
+}
+
+
+#color-choice-container {
+    display: flex;
+    .color-choice {
+        height: 22px;
+        flex:1;
+        border: 1px solid var(--primary-medium);
+        border-right:0;
+    }
+    #first-color {
+        border-top-left-radius:8px;
+        background-color:#fdfd96;
+    }
+    #second-color {
+        background-color:pink;
+    }
+    #third-color {
+        background-color: paleturquoise;
+    }
+    #fourth-color {
+        background-color: palegreen;
+    }
+    #fifth-color {
+        border-top-right-radius:8px;
+        border-right: 1px solid var(--primary-medium);
+        background-color:lightgrey;
+    }
+}
+
+.note-panel .menu-panel {
+    padding: 0;
+    border-radius: 8px;
+}
+
+#quick-notes-container {
+    h1 {
+        border-top-left-radius:8px;
+        border-top-right-radius:8px;
+        background-color: #fdfd96;
+        font-size: 1.5rem;
+        font-weight: 550;
+        padding: 0.25rem 0;
+    }
+    
+    .d-icon {
+        height:0.8em;
+        width:0.8em;
+        color: var(--primary-medium);
+    }
+    .notes-search-input {
+        margin-top: 1rem;
+        input[type="text"]#notes-search {
+            border-radius: 8px;
+            margin:0;
+            width:80%;
+            outline:none;
+        }
+        .d-icon {
+            margin-left:2%;
+        }
+    }
+    ul {
+        margin: 0.5rem 0;
+        li {
+            line-height:2;
+            text-align:left;
+            margin: 0 5%;
+            &:hover {
+                background-color: var(--note-background);
+                border-radius: 8px;
+            }
+            .d-icon {
+                margin:0 2%;
+            }
+        }
+    }
 }

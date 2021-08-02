@@ -35,7 +35,7 @@ function initializePersonalNote(api) {
     }
   });
 
-  api.decorateWidget('header-icons:before', function(helper) {
+  api.decorateWidget('header-icons:after', function(helper) {
     const headerState = helper.widget.parentWidget.state;
     let contents = [];
       contents.push(helper.attach('header-dropdown', {
@@ -56,8 +56,8 @@ function initializePersonalNote(api) {
   });
   
   api.onPageChange(() => {
-    let colorIds = ['first-color', 'second-color', 'third-color', 'fourth-color', 'fifth-color', 'transparent-choice'];
-    let colors = ['#fdfd96','pink','paleturquoise','palegreen','lightgrey', 'transparent'];
+    let colorIds = ['first-color', 'second-color', 'third-color', 'fourth-color', 'fifth-color'];
+    let colors = ['#fdfd96','pink','paleturquoise','palegreen','lightgrey'];
     for (let i = 0; i < colorIds.length; i++) {
       document.getElementById(`${colorIds[i]}`).onclick = function() {
         document.documentElement.style.setProperty("--note-background", `${colors[i]}`);
@@ -70,6 +70,33 @@ function initializePersonalNote(api) {
         elem.style.display = "none";
       } else {
         elem.style.display = "block";
+      }
+    }
+
+    document.getElementById('saveStyle').onclick = function() {
+      let font = document.getElementById('fonts-selector').value;
+      let font_style = document.getElementById('font-styles-selector').value;
+      let font_size = document.getElementById('font-sizes-selector').value;
+      
+      if (font == 'font-default' && font_style == 'style-default' && font_size == 'size-default') {
+        return;
+      }
+      
+      if (font_style=='italic') {
+        document.getElementById("note").style = "font-family: "+ font + ";\n" + "font-style: " + font_style + ";\n" + "font-size: " + font_size + ";";
+      } else {
+        document.getElementById("note").style = "font-family: "+ font + ";\n" + "font-weight: " + font_style + ";\n" + "font-size: " + font_size + ";";
+      }
+    }
+
+    document.getElementById('styleSettings').onclick = function() {
+      let elem = document.getElementById("note-body-buttons");
+      if (elem.style.display == "flex") {
+        document.getElementById("styleSettings").innerHTML = "Show Settings";
+        elem.style.display = "none";
+      } else {
+        document.getElementById("styleSettings").innerHTML = "Hide Settings";
+        elem.style.display = "flex";
       }
     }
   });
