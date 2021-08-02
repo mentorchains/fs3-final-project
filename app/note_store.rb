@@ -1,5 +1,7 @@
 class NoteStore
   class << self
+
+    #Change the name of 'notebook' and 'notes'?
     def get_notes
       PluginStore.get('notebook', 'notes') || {}
     end

@@ -3,8 +3,8 @@
 </button>
 
 <div id="note-body">
-  <!-- Line below: Is this how we should do the createnote on the form? -->
-  <form id="form-id" {{ action 'createNote' content this.id on='submit' }}>
+  <form id="form-id" {{ action 'createNote' note-content on='submit' }}>
+    <!--Above: 'note-content' is the name of the text area for the note -->
     <div id="color-choice-container">
       <div class="color-choice" id="first-color"></div>
       <div class="color-choice" id="second-color"></div>
@@ -12,12 +12,12 @@
       <div class="color-choice" id="fourth-color"></div>
       <div class="color-choice" id="fifth-color"></div>
     </div>
-    <textarea id="note" rows="6" cols="80"></textarea>
+    <textarea id="note" name="note-content" rows="6" cols="80"></textarea>
     <div id="control-panel">
       <!-- Line below: toggle show options -->
       <button type="button" id="styleSettings">Show Settings</button>
 
-      <!-- Line below: submit and save note -->
+      <!-- Line below: submit and save note using createNote action-->
       <input type="submit" value="Save Note" id="save">
     </div>
 

@@ -33,6 +33,7 @@ export default Ember.Controller.extend({
         .catch(console.error);
     },
 
+    //we currently do not use deleteNote
     deleteNote(note) {
       this.store.destroyRecord('note', note)
         .then(() => {
