@@ -82,6 +82,54 @@ function initializePersonalNotes(api) {
                 elem.style.display = "block";
             }
         };
+        document.getElementById("saveStyle").onclick = function () {
+            let font = document.getElementById("fonts-selector").value;
+            let font_style = document.getElementById("font-styles-selector").value;
+            let font_size = document.getElementById("font-sizes-selector").value;
+
+            if (
+                font == "font-default" &&
+                font_style == "style-default" &&
+                font_size == "size-default"
+            ) {
+                return;
+            }
+
+            if (font_style == "italic") {
+                document.getElementById("note").style =
+                    "font-family: " +
+                    font +
+                    ";\n" +
+                    "font-style: " +
+                    font_style +
+                    ";\n" +
+                    "font-size: " +
+                    font_size +
+                    ";";
+            } else {
+                document.getElementById("note").style =
+                    "font-family: " +
+                    font +
+                    ";\n" +
+                    "font-weight: " +
+                    font_style +
+                    ";\n" +
+                    "font-size: " +
+                    font_size +
+                    ";";
+            }
+        };
+
+        document.getElementById("styleSettings").onclick = function () {
+            let elem = document.getElementById("note-body-buttons");
+            if (elem.style.display == "flex") {
+                document.getElementById("styleSettings").innerHTML = "Show Settings";
+                elem.style.display = "none";
+            } else {
+                document.getElementById("styleSettings").innerHTML = "Hide Settings";
+                elem.style.display = "flex";
+            }
+        };
     });
 }
 
