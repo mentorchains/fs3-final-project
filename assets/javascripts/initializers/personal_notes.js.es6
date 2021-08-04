@@ -3,7 +3,7 @@ import { iconNode } from "discourse-common/lib/icon-library";
 import { h } from "virtual-dom";
 let icon = iconNode("sticky-note");
 
-function initializePersonalNote(api) {
+function initializePersonalNotes(api) {
     // https://github.com/discourse/discourse/blob/master/app/assets/javascripts/discourse/lib/plugin-api.js.es6
     api.createWidget("note-menu", {
         tagName: "div.note-panel",
@@ -85,9 +85,9 @@ function initializePersonalNote(api) {
 }
 
 export default {
-    name: "personal-notes",
+    name: "personal_notes",
 
     initialize() {
-        withPluginApi("0.8.31", initializePersonalNote);
+        withPluginApi("0.8.31", initializePersonalNotes);
     },
 };

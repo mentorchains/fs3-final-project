@@ -1,0 +1,33 @@
+<button title="take notes" class="widget-button btn btn-default no-text btn-icon" id="note-button">
+    {{d-icon "sticky-note"}}
+</button>
+
+<div id="note-body">
+    {{#if notes}}
+        <ul>
+            {{#each notes as |note|}}
+                <li>
+                    {{note.content}}
+
+                    <button type="button" class="btn btn-danger" {{action "deleteNote" note}}>
+                        {{i18n "notebook.delete_note_label"}}
+                    </button>
+                </li>
+            {{/each}}
+        </ul>
+    {{/if}}
+    <form {{action "createNote" note on="submit"}}>
+        <div id="color-choice-container">
+            <div class="color-choice" id="first-color"></div>
+            <div class="color-choice" id="second-color"></div>
+            <div class="color-choice" id="third-color"></div>
+            <div class="color-choice" id="fourth-color"></div>
+            <div class="color-choice" id="fifth-color"></div>
+        </div>
+        {{textarea id="note" name="note" value=note}}
+        <div class="note-body-buttons">
+            <div id="transparent-choice"></div>
+            <input type="submit" value="Save" id="save" />
+        </div>
+    </form>
+</div>
