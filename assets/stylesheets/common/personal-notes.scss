@@ -2,8 +2,8 @@
     --note-background: #fdfd96;
 }
 
-.personal-notes {
-}
+// .personal-notes {
+// }
 
 #note-button {
     position:fixed;
@@ -29,7 +29,7 @@
             overflow: auto;
             width: 12rem;
             height: 10rem;
-            min-width: 12rem;
+            min-width: 15rem;
             min-height: 10rem;
             border-bottom-left-radius:8px;
             border-bottom-right-radius:8px;
@@ -37,16 +37,21 @@
         .note-body-buttons {
             display: flex;
             height: 25px;
-            #transparent-choice {
-                padding-left: 1em;
+            select {
                 margin-left: 10px;
-                border: 1px solid var(--primary-medium);
-                width: 25px;
-                background: repeating-conic-gradient(#808080 0% 25%, transparent 0% 50%) 
-                            50% / 20px 20px;
-                background-size:13px 13px;
-                background-color:white;
+                height: fit-content;
+                width: max-content;
             }
+            // #transparent-choice {
+            //     padding-left: 1em;
+            //     margin-left: 10px;
+            //     border: 1px solid var(--primary-medium);
+            //     width: 25px;
+            //     background: repeating-conic-gradient(#808080 0% 25%, transparent 0% 50%) 
+            //                 50% / 20px 20px;
+            //     background-size:13px 13px;
+            //     background-color:white;
+            // }
             #save {
                 border: 1px solid var(--primary-medium);
                 position: absolute;
