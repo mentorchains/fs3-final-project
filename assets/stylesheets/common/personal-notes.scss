@@ -2,8 +2,8 @@
     --note-background: #fdfd96;
 }
 
-.personal-notes {
-}
+// .personal-notes {
+// }
 
 #note-button {
     position:fixed;
@@ -13,13 +13,12 @@
 #note-body {
     display: none;
     position:fixed;
-    z-index: 1;
+    z-index: 999;
     top:13%;
     border: 1px solid #ddd;
     background-color: var(--note-background);
     box-shadow: 7px 7px 7px rgba(0,0,0,.1);
     border-radius:8px;
-    overflow: hidden;
     form {
         // display buttons under textarea
         display: flex;
@@ -28,25 +27,35 @@
             background-color: var(--note-background);
             border-top:0;
             overflow: auto;
-            width: 20rem;
-            height: 15rem;
+            width: 12rem;
+            height: 10rem;
+            min-width: 15rem;
+            min-height: 10rem;
             border-bottom-left-radius:8px;
             border-bottom-right-radius:8px;
         }
         .note-body-buttons {
             display: flex;
             height: 25px;
-            #transparent-choice {
-                border: 1px solid var(--primary-medium);
-                width: 25px;
-                background: repeating-conic-gradient(#808080 0% 25%, transparent 0% 50%) 
-                            50% / 20px 20px;
-                background-size:13px 13px;
-                background-color:white;
-                margin-right: 10px;
+            select {
+                margin-left: 10px;
+                height: fit-content;
+                width: max-content;
             }
+            // #transparent-choice {
+            //     padding-left: 1em;
+            //     margin-left: 10px;
+            //     border: 1px solid var(--primary-medium);
+            //     width: 25px;
+            //     background: repeating-conic-gradient(#808080 0% 25%, transparent 0% 50%) 
+            //                 50% / 20px 20px;
+            //     background-size:13px 13px;
+            //     background-color:white;
+            // }
             #save {
                 border: 1px solid var(--primary-medium);
+                position: absolute;
+                right:10px;
             }
         }
     }
