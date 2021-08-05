@@ -1,0 +1,10 @@
+zh_CN:
+    js:
+        personal_notes:
+            title: "个人备忘录"
+
+            create_note:
+                text_field_label: "新建备忘录："
+                submit_label: "保存"
+
+            delete_note_label: "删除"
