@@ -1,3 +1,10 @@
 en:
-  js:
-    personal_notes:
+    js:
+        personal_notes:
+            title: "Personal_notes"
+
+            create_note:
+                text_field_label: "New note:"
+                submit_label: "Save"
+
+            delete_note_label: "Delete"
