@@ -1,0 +1,10 @@
+telg:
+    js:
+        personal_notes:
+            title: "నా_నోట్స్"
+
+            create_note:
+                text_field_label: "కొత్త నోట్స్:"
+                submit_label: "సేవ్"
+
+            delete_note_label: "తొలగించండి"
