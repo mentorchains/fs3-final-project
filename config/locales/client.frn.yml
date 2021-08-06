@@ -1,0 +1,10 @@
+frn:
+    js:
+        personal_notes:
+            title: "Notes_de_Personnel"
+
+            create_note:
+                text_field_label: "Nouvelle note:"
+                submit_label: "Sauvegarder"
+
+            delete_note_label: "Supprimer"
