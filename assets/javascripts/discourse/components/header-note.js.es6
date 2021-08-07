@@ -46,11 +46,11 @@ export default Ember.Component.extend({
                 .catch(console.error);
         },
         // updateNote
-        updateNote(id, content) {
+        updateNote(note) {
             this.store 
-                .findRecord('note', id)
+                .findRecord('note', note.id)
                 .then((post) => {
-                    post.content = content;
+                    post.content = note.content;
                     post.save();
                 })
                 .catch(console.error);
