@@ -82,7 +82,7 @@ function initializePersonalNotes(api) {
                 elem.style.display = "block";
             }
         };
-        document.getElementById("saveStyle").onclick = function () {
+        document.getElementById('saveStyle').onclick = function () {
             let font = document.getElementById("fonts-selector").value;
             let font_style = document.getElementById("font-styles-selector").value;
             let font_size = document.getElementById("font-sizes-selector").value;
@@ -96,7 +96,7 @@ function initializePersonalNotes(api) {
             }
 
             if (font_style == "italic") {
-                document.getElementById("note").style =
+                document.getElementById("note-textarea").style =
                     "font-family: " +
                     font +
                     ";\n" +
@@ -107,7 +107,7 @@ function initializePersonalNotes(api) {
                     font_size +
                     ";";
             } else {
-                document.getElementById("note").style =
+                document.getElementById("note-textarea").style =
                     "font-family: " +
                     font +
                     ";\n" +
