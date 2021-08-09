@@ -16,6 +16,7 @@ load File.expand_path('../app/note_store.rb', __FILE__)
 PLUGIN_NAME ||= 'Personal Notes'
 
 after_initialize do
+
   load File.expand_path('../app/controllers/personal_notes_controller.rb', __FILE__)
   load File.expand_path('../app/controllers/notes_controller.rb', __FILE__)
 
@@ -29,8 +30,12 @@ after_initialize do
   end
 end
 
+
+
+require_dependency 'user'
+
 module ::DiscoursePersonalNotes
-  class Engine< ::Rails::Engine
+  class Engine < ::Rails::Engine
     engine_name "discourse_personal_notes"
     isolate_namespace DiscoursePersonalNotes
   end
@@ -40,9 +45,35 @@ module ::DiscoursePersonalNotes
   end
 
   def self.notes_for(user)
+    PluginStore.get('user_notes', key_for(user_id) || []
+  end
 
+  def self.add_note(user, raw, created_by, opts =nil)
+    opts||= {}
 
-end
+    notes = notes_for(user.id)
+
+    record = {
+      id: SecureRandom.hex(16),
+      user_id: user.id,
+      raw: raw;
+      created_by: created_by,
+      created_at: Time.now
+    }.merge(opts)
+
+    notes << record 
+    ::PluginStore.set("user_notes", key_for(user.id), notes)
+
+    user.custom_fields[COUNT_FIELD] = notes.save
+    user.save_custom_fields
+
+    record
+
+  end
+
+  
+
+  
 require_dependency 'application_serializer'
   class ::NoteSerializer < ApplicationSerializer
     attributes(
@@ -50,6 +81,7 @@ require_dependency 'application_serializer'
       :user_id,
       :post_id,
       :content
+      #:post_title
     )
 
     def id
@@ -67,4 +99,10 @@ require_dependency 'application_serializer'
     def content
       object[:content]
     end
+
+    #Future addition: note title? Add definition below: 
+
+    #def post_title
+    #  object[:post].try(:title)
+    #end
   end
