@@ -1,4 +1,6 @@
-class NotesController < ApplicationController
+require_dependency 'application_controller'
+
+class DiscoursePersonalNotes::NotesController < ApplicationController
   def index
       Rails.logger.info 'Called NotesController#index'
       notes = NoteStore.get_notes()
@@ -18,6 +20,7 @@ class NotesController < ApplicationController
 
     render json: { note: note }
   end
+
   def destroy
     Rails.logger.info 'Called NotesController#destroy'
 

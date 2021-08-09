@@ -2,6 +2,7 @@ class NoteStore
   class << self
 
     def get_notes
+
       PluginStore.get('personal_notes', 'notes') || {}
     end
 
@@ -11,6 +12,7 @@ class NoteStore
       PluginStore.set('personal_notes', 'notes', notes)
       note
     end
+    
     def remove_note(note_id)
       notes = get_notes()
       notes.delete(note_id)

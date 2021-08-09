@@ -5,3 +5,5 @@ export default DiscourseRoute.extend({
         this.render("personal_notes");
     },
 });
+
+
