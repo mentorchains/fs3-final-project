@@ -31,7 +31,6 @@ after_initialize do
 end
 
 
-
 require_dependency 'user'
 
 module ::DiscoursePersonalNotes
@@ -72,37 +71,44 @@ module ::DiscoursePersonalNotes
   end
 
   
+end
 
-  
+
+
 require_dependency 'application_serializer'
-  class ::NoteSerializer < ApplicationSerializer
-    attributes(
-      :id,
-      :user_id,
-      :post_id,
-      :content
-      #:post_title
-    )
 
-    def id
-      object[:id]
-    end
-
-    def user_id
-      object[:user_id]
-    end
-
-    def post_id
-      object[:post_id]
-    end
-
-    def content
-      object[:content]
-    end
-
-    #Future addition: note title? Add definition below: 
-
-    #def post_title
-    #  object[:post].try(:title)
-    #end
+class ::NoteSerializer < ApplicationSerializer
+  attributes(
+    :id,
+    :user_id,
+    :post_id,
+    :content
+    #:post_title
+  )
+  def id
+    object[:id]
   end
+  def user_id
+    object[:user_id]
+  end
+  def post_id
+    object[:post_id]
+  end
+  def content
+    object[:content]
+  end
+  #Future addition: note title? Add definition below: 
+  #def post_title
+  #  object[:post].try(:title)
+  #end
+end
+
+
+
+require_dependency 'application_controller'
+
+class DiscoursePersonalNotes::notes_controller < ::ApplicationController
+  before_action :ensure_logged_in
+  before_action :ensure_staff
+
+  #stuff from note_store.rb 
