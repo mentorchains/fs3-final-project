@@ -1,6 +1,5 @@
-require_dependency 'user'
+class NoteStore  
 
-class NoteStore
   class << self
 
     def get_notes
@@ -20,4 +19,5 @@ class NoteStore
       notes.delete(note_id)
       PluginStore.set('personal_notes', 'notes', notes)
     end
+  end
 end
