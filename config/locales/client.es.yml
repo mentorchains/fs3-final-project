@@ -5,7 +5,7 @@ es:
 
       create_note:
         text_field_label: "Nueva Nota"
-        submit_label: "Guardar"
+        submit_label: "Salvar"
 
       delete_note_label: "Eliminar"
 
