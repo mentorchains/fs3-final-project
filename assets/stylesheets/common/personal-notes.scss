@@ -67,11 +67,6 @@
                 color: var(--secondary);
             }
         }
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> frontend
         .note-body-buttons {
             display: none;
             flex-direction: column;
@@ -79,19 +74,11 @@
             margin: 10px;
             select {
                 border: 1px solid var(--primary-low-mid);
-<<<<<<< HEAD
                 border-radius: 4px;
                 display: flex;
                 flex: 1;
             }
 
-=======
-                border-radius:4px;
-                display: flex;
-                flex:1;
-            }
-        
->>>>>>> frontend
             #saveStyle:hover {
                 background-color: var(--success);
                 color: var(--secondary);
@@ -100,16 +87,11 @@
     }
 }
 
-
 #color-choice-container {
     display: flex;
     .color-choice {
         height: 22px;
-<<<<<<< HEAD
         flex: 1;
-=======
-        flex:1;
->>>>>>> frontend
         border: 1px solid var(--primary-medium);
         border-right: 0;
     }
