@@ -82,7 +82,7 @@ function initializePersonalNotes(api) {
                 elem.style.display = "block";
             }
         };
-        document.getElementById('saveStyle').onclick = function () {
+        document.getElementById("saveStyle").onclick = function () {
             let font = document.getElementById("fonts-selector").value;
             let font_style = document.getElementById("font-styles-selector").value;
             let font_size = document.getElementById("font-sizes-selector").value;
@@ -123,10 +123,8 @@ function initializePersonalNotes(api) {
         document.getElementById("styleSettings").onclick = function () {
             let elem = document.getElementById("note-body-buttons");
             if (elem.style.display == "flex") {
-                document.getElementById("styleSettings").innerHTML = "Show Settings";
                 elem.style.display = "none";
             } else {
-                document.getElementById("styleSettings").innerHTML = "Hide Settings";
                 elem.style.display = "flex";
             }
         };
