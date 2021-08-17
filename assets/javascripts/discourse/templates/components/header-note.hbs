@@ -30,7 +30,11 @@
         </div>
         {{textarea id="note-textarea" name="note-textarea" value=note}}
         <div id="control-panel">
-            <button class="btn btn-default no-text btn-icon ember-view" id="styleSettings">
+            <button
+                type="button"
+                class="btn btn-default no-text btn-icon ember-view"
+                id="styleSettings"
+            >
                 {{d-icon "cog"}}</button>
             <button type="submit" class="btn btn-default ember-view" id="save">
                 {{d-icon "sticky-note"}}Save</button>
