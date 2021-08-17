@@ -38,13 +38,6 @@
             border-bottom-right-radius: 8px;
         }
 
-        input[type="submit"],
-        button[type="button"] {
-            flex: 1;
-            border: 1px solid var(--primary-medium);
-            border-radius: 4px;
-        }
-
         #control-panel {
             display: flex;
             // flex-wrap: nowrap;
@@ -61,11 +54,6 @@
             #save {
                 margin-right: 10px;
             }
-
-            #save:hover {
-                background-color: var(--success);
-                color: var(--secondary);
-            }
         }
         .note-body-buttons {
             display: none;
@@ -77,11 +65,6 @@
                 border-radius: 4px;
                 display: flex;
                 flex: 1;
-            }
-
-            #saveStyle:hover {
-                background-color: var(--success);
-                color: var(--secondary);
             }
         }
     }
