@@ -1,3 +1,5 @@
 {{#if currentUser}}
-    {{header-note}}
+    {{#if siteSettings.personal_notes_enabled}}
+        {{header-note}}
+    {{/if}}
 {{/if}}
