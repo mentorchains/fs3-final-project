@@ -4,6 +4,14 @@ import { h } from "virtual-dom";
 let icon = iconNode("sticky-note");
 
 function initializePersonalNotes(api) {
+    const siteSettings = api.container.lookup("site-settings:main");
+    const currentUser = api.getCurrentUser();
+    if (!currentUser) {
+        return;
+    }
+    if (!siteSettings.personal_notes_enabled) {
+        return;
+    }
     // https://github.com/discourse/discourse/blob/master/app/assets/javascripts/discourse/lib/plugin-api.js.es6
     api.createWidget("note-menu", {
         tagName: "div.note-panel",
@@ -135,6 +143,6 @@ export default {
     name: "personal_notes",
 
     initialize() {
-        withPluginApi("0.8.31", initializePersonalNotes);
+        withPluginApi("0.8.31", (api) => initializePersonalNotes(api));
     },
 };
