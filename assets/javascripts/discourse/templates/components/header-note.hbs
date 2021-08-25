@@ -3,23 +3,26 @@
 </button>
 
 <div id="note-body">
-    {{#if notes}}
-        <ul>
-            {{#each notes as |note|}}
-                <li>
-                    {{note.content}}
+    <div id="note-list">
 
-                    <button
-                        type="button"
-                        class="btn btn-danger no-text btn-icon"
-                        {{action "deleteNote" note}}
-                    >
-                        {{d-icon "trash-alt"}}
-                    </button>
-                </li>
-            {{/each}}
-        </ul>
-    {{/if}}
+        {{#if notes}}
+            <ul>
+                {{#each notes as |note|}}
+                    <li>
+                        {{note.content}}
+
+                        <button
+                            type="button"
+                            class="btn btn-danger no-text btn-icon"
+                            {{action "deleteNote" note}}
+                        >
+                            {{d-icon "trash-alt"}}
+                        </button>
+                    </li>
+                {{/each}}
+            </ul>
+        {{/if}}
+    </div>
     <form {{action "createNote" note on="submit"}}>
         <div id="color-choice-container">
             <div class="color-choice" id="first-color"></div>
@@ -63,7 +66,7 @@
                 <option value="medium" id="second-size">Medium</option>
                 <option value="large" id="third-size">Large</option>
             </select>
-            <button class="btn btn-default" id="saveStyle">Save Style</button>
+            <button type="button" class="btn btn-default" id="saveStyle">Save Style</button>
         </div>
     </form>
 </div>
