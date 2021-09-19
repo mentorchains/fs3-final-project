@@ -9,6 +9,9 @@ how-to from the official Discourse Meta, using https://github.com/mentorchains/f
 
 ## Usage
 
+![Usage](https://github.com/mentorchains/fs3-final-project/blob/main/usage.gif)
+
+
 ## Feedback
 
 If you have issues or suggestions for the plugin, please bring them up on
